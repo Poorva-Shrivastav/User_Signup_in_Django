@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 style="color: blue"> 
+
+Email is already registered
+
+</h2>
+
+<form method="POST"> {% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Try Again"/>
+
+{% endblock%}
